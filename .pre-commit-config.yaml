@@ -1,7 +1,7 @@
 ---
 ci:
   autoupdate_schedule: quarterly
-  skip: ["poetry-lock", "sourcery", "pytest", "coverage-badge"]
+  skip: ["identity", "poetry-lock", "pytest", "coverage-badge"]
 
 repos:
   - repo: meta
@@ -54,16 +54,6 @@ repos:
         args: ["--fix"]
       - id: ruff-format
         name: Format Python code
-
-  # Sourcery
-  - repo: https://github.com/sourcery-ai/sourcery
-    rev: v1.18.1b30
-    hooks:
-      - id: sourcery
-        name: Check for refactoring opportunities
-        args: ["--diff=git diff HEAD", "--no-summary"]
-        files: drawings
-        exclude: \.*/__init__\.py
 
   # Testing and coverage
   - repo: local

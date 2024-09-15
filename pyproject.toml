@@ -4,13 +4,12 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry]
-name = "python-template"
+name = "uk-tax-calculator"
 version = "0.0.0"
-description = ""
+description = "A calculator for UK tax."
 authors = ["Bilbottom"]
 readme = "README.md"
-packages = [{include = "src"}]
-#package-mode = false
+packages = [{include = "uk_tax_calculator"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -29,7 +28,7 @@ pytest-cov = "^4.1.0"
 
 
 [tool.pytest.ini_options]
-addopts = "--cov=src --cov-fail-under=80"
+addopts = "--cov=uk_tax_calculator --cov-fail-under=80"
 testpaths = ["tests"]
 
 

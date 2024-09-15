@@ -1,8 +1,8 @@
 """
-Unit tests for the ``src.main`` module.
+Unit tests for the ``uk_tax_calculator.main`` module.
 """
 
-from src import main
+from uk_tax_calculator import main
 
 
 def test__main():
