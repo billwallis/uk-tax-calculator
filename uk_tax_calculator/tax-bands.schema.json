@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "tax_year": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{4}$",
+      "description": "The tax year for which the tax bands apply"
+    },
+    "personal_allowance": {
+      "type": "number",
+      "description": "The amount of income that can be earned before tax is due"
+    },
+    "income_limit_for_personal_allowance": {
+      "type": "number",
+      "description": "The income limit above which the personal allowance is reduced"
+    },
+    "tax_basic_rate": {
+      "type": "number",
+      "description": "The amount up to which income is taxed at the basic rate, after allowance deductions"
+    },
+    "tax_higher_rate": {
+      "type": "number",
+      "description": "The amount up to which income is taxed at the higher rate, after allowance deductions"
+    },
+    "ni_primary_threshold": {
+      "type": "number",
+      "description": "The amount of income above which National Insurance contributions are due"
+    },
+    "ni_upper_earnings_limit": {
+      "type": "number",
+      "description": "The amount of income above which National Insurance contributions are due at a lower rate"
+    },
+    "married_couples_allowance_maximum": {
+      "type": "number",
+      "description": ""
+    },
+    "married_couples_allowance_minimum": {
+      "type": "number",
+      "description": ""
+    },
+    "blind_persons_allowance": {
+      "type": "number",
+      "description": "An additional personal allowance for blind persons"
+    }
+  }
+}

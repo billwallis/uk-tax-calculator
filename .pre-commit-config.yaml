@@ -26,6 +26,7 @@ repos:
         name: Check JSON files are valid and parseable
       - id: check-yaml
         name: Check YAML files are valid and parseable
+        args: ["--unsafe"]
       - id: check-toml
         name: Check TOML files are valid and parseable
       - id: check-ast

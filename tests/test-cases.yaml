@@ -1,0 +1,38 @@
+---
+test-cases:
+  - !TestCase
+    salary: 10000
+    tax_year: 2024/2025
+    pre_tax_adjustments: 0
+    # then
+    personal_allowance: 10000 # 12570
+    taxable_income: 0
+    tax: 0
+    national_insurance: 0
+    other_deductions: []
+    total_deductions: 0
+    take_home_pay: 10000
+  - !TestCase
+    salary: 40000
+    tax_year: 2024/2025
+    pre_tax_adjustments: 3600
+    # then
+    personal_allowance: 12570
+    taxable_income: 23830
+    tax: 4766 # 4764.20
+    national_insurance: 2193.28 # 2194.20
+    other_deductions: []
+    total_deductions: 6959.28 # 6958.40
+    take_home_pay: 29440.72 # 29441.40
+  - !TestCase
+    salary: 200000
+    tax_year: 2024/2025
+    pre_tax_adjustments: 0
+    # then
+    personal_allowance: 0
+    taxable_income: 200000
+    tax: 76203 # 7,540 + 34,976 + 33,687
+    national_insurance: 6010.32 # 6010.60
+    other_deductions: []
+    total_deductions: 82213.32 # 82213.60
+    take_home_pay: 117786.68 # 117786.40
