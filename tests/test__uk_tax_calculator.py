@@ -5,6 +5,7 @@ Test cases can be generated from:
 
 - https://www.tax.service.gov.uk/estimate-paye-take-home-pay
 """
+
 import decimal
 import math
 
