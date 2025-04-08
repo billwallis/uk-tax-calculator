@@ -21,11 +21,11 @@ ZERO = decimal.Decimal(0)
 PENCE = decimal.Decimal("0.01")
 
 # TODO: Add these to the config since they can change per year
-TAX_BASIC_RATE = decimal.Decimal(0.2)
-TAX_HIGHER_RATE = decimal.Decimal(0.4)
-TAX_ADDITIONAL_RATE = decimal.Decimal(0.45)
-NI_BASIC_RATE = decimal.Decimal(0.08)
-NI_ADDITIONAL_RATE = decimal.Decimal(0.02)
+TAX_BASIC_RATE = decimal.Decimal("0.2")
+TAX_HIGHER_RATE = decimal.Decimal("0.4")
+TAX_ADDITIONAL_RATE = decimal.Decimal("0.45")
+NI_BASIC_RATE = decimal.Decimal("0.08")
+NI_ADDITIONAL_RATE = decimal.Decimal("0.02")
 
 
 class TaxYear(enum.StrEnum):
