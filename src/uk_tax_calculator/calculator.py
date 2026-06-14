@@ -64,11 +64,11 @@ class NetIncome:
     personal_allowance: decimal.Decimal
     tax: decimal.Decimal
     national_insurance: decimal.Decimal
-    other_deductions: [Deduction]
+    other_deductions: list[Deduction]
     total_deductions: decimal.Decimal
     take_home_pay: decimal.Decimal
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         """
         Round all values to the nearest penny.
         """
@@ -227,7 +227,7 @@ def _calculate_contributions(
     )
 
     return sum(
-        (amount * rate for amount, rate in zip(amounts, rates)),
+        (amount * rate for amount, rate in zip(amounts, rates, strict=False)),
         start=ZERO,
     )
 
