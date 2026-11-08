@@ -1,7 +1,6 @@
 <span align="center">
 
 [![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
-[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![tests](https://github.com/billwallis/uk-tax-calculator/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/uk-tax-calculator/actions/workflows/tests.yaml)
 [![coverage](https://raw.githubusercontent.com/billwallis/uk-tax-calculator/refs/heads/main/coverage.svg)](https://smarie.github.io/python-genbadge/)
 
@@ -18,8 +17,9 @@ A calculator for UK tax.
 
 ## Contributing
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and then install the dependencies:
+Install the dependencies:
 
 ```shell
-uvx --from poethepoet poe install
+pip install --editable . --group dev --group test
+pre-commit install --install-hooks
 ```
